@@ -46,7 +46,7 @@
             <div class="col">
             </div>
             <div class="col">
-                <img src="\img\mboranLogo.png" class="rounded mx-auto d-bloc">
+                <img src="img\mboranLogo.png" class="mx-auto d-block">
             </div>
             <div class="col">
             </div>
@@ -68,7 +68,7 @@
               </div>
             </div>
             <div class="col">
-                <img src="\img\nasiboran1.png" class="rounded mx-auto d-bloc">
+                <img src="img\nasiboran1.png" class="rounded mx-auto d-bloc">
             </div>
         </div>
     </div>
