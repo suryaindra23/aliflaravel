@@ -26,8 +26,10 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])
 
 // Route::get('/rekomendasi', [App\Http\Controllers\DecisionTreeHelper::class, 'index'])->name('rekomendasi');
 
-Route::get('/rekomendasi', [RekomendasiController::class,'index'])->name('index');
+Route::get('/rekomendasi', [RekomendasiController::class,'hasilRekomendasi'])->name('hasilRekomendasi');
+// Route::get('/rekomendasi', 'RekomendasiController@index');
 
+// Route::get('/rekomendasi', 'RekomendasiController@index')->name('rekomendasi.index');
 
 Route::get('/penjual', 'PegawaiController@index');
 

@@ -3,5 +3,5 @@
     <p>{{ $result->penjual }}</p>
     <p>{{ $result->alamat }}</p>
     <p>{{ $result->jam_buka }}</p>
-    <p>{{ $result->jam_tutup }}</p>
+    <p>{{ $result->alamat }}</p>
 @endforeach
