@@ -15,6 +15,9 @@ class Rekomendasi extends Model
         'parkir',
         'warna_sambal',
         'penjual',
+        'alamat',
+        'jam_buka',
+        'jam_tutup',
     ];
     use HasFactory;
 }

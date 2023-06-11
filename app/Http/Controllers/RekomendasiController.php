@@ -30,8 +30,15 @@ class RekomendasiController extends Controller
 
         // Mengeluarkan 'penjual' dari hasil query
         $penjual = $rekomendasi->pluck('penjual');
+        $alamat = $rekomendasi->pluck('alamat');
+        $jam_buka = $rekomendasi->pluck('jam_buka');
+        $jam_buka = $rekomendasi->pluck('jam_tutup');
 
         // Render halaman form dengan menyertakan data penjual
-        return view('/rekomendasi', compact('penjual'));
+        return view('/rekomendasi', 
+        compact('penjual'),
+        compact('alamat'),
+        compact('jam_buka'),
+        compact('jam_tutup'));
     }
 }

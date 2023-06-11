@@ -22,6 +22,10 @@ class CreateRekomendasisTable extends Migration
             $table->string('parkir');
             $table->string('warna_sambal');
             $table->string('penjual');
+            $table->string('alamat');
+            $table->string('nohp');
+            $table->string('jam_buka');
+            $table->string('jam_tutup');
             $table->timestamps();
         });
     }

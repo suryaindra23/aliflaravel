@@ -158,6 +158,15 @@
                 @foreach ($penjual as $namaPenjual)
                     <li>{{ $namaPenjual }}</li>
                 @endforeach
+                @foreach ($alamat as $alamatPenjual)
+                    <li>{{ $alamatPenjual }}</li>
+                @endforeach
+                @foreach ($jam_buka as $jam_bukaPenjual)
+                    <li>{{ $jam_bukaPenjual }}</li>
+                @endforeach
+                @foreach ($jam_tutup as $jam_tutupPenjual)
+                    <li>{{ $jam_tutupPenjual }}</li>
+                @endforeach
             </ul>
         @endif
     @endif
