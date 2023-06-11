@@ -156,12 +156,30 @@
         @else
             <ul>
                 @foreach ($penjual as $namaPenjual)
-                    <li>{{ $namaPenjual }}</li>
+                    <li>
+                        <strong>Nama Penjual : </strong>{{ $namaPenjual }}
+                    </li>
                 @endforeach
             </ul>
             <ul>
                 @foreach ($alamat as $alamatPenjual)
-                    <li>{{ $alamatPenjual }}</li>
+                    <li>
+                        <strong>Alamat Penjual : </strong>{{ $alamatPenjual }}
+                    </li>
+                @endforeach
+            </ul>
+            <ul>
+                @foreach ($jamBuka as $jamBukaPenjual)
+                    <li>
+                        <strong>Jam Buka : </strong> {{ $jamBukaPenjual }}
+                    </li>
+                @endforeach
+            </ul>
+            <ul>
+                @foreach ($jamTutup as $jamTutupPenjual)
+                    <li>
+                        <strong>Jam Tutup : </strong>{{ $jamTutupPenjual }}
+                    </li>
                 @endforeach
             </ul>
         @endif

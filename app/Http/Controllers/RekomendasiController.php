@@ -17,7 +17,7 @@ class RekomendasiController extends Controller
         $harga = $request->input('harga');
         $porsi = $request->input('porsi_makan');
         $parkir = $request->input('parkir');
-        $lokasiMakan = $request->input('tempat_makan');
+        $tempatMakan = $request->input('tempat_makan');
 
         // Menjalankan query untuk mencocokan parameter di database
         $rekomendasi = Rekomendasi::where('rasa_sambal', $rasa)
@@ -25,16 +25,16 @@ class RekomendasiController extends Controller
             ->where('harga', $harga)
             ->where('porsi_makan', $porsi)
             ->where('parkir', $parkir)
-            ->where('tempat_makan', $lokasiMakan)
+            ->where('tempat_makan', $tempatMakan)
             ->get();
 
         // Mengeluarkan 'penjual' dari hasil query
         $penjual = $rekomendasi->pluck('penjual');
         $alamat = $rekomendasi->pluck('alamat');
-        $jam_tutup = $rekomendasi->pluck('jam_tutup');
-        $jam_buka = $rekomendasi->pluck('jam_buka');
+        $jamBuka = $rekomendasi->pluck('jam_buka');
+        $jamTutup = $rekomendasi->pluck('jam_tutup');
 
         // Render halaman form dengan menyertakan data penjual
-        return view('/rekomendasi', compact('penjual'));
+        return view('/rekomendasi', compact('penjual', 'alamat','jamBuka','jamTutup'));
     }
 }

@@ -2,6 +2,6 @@
     <!-- Tampilkan data hasil -->
     <p>{{ $result->penjual }}</p>
     <p>{{ $result->alamat }}</p>
-    <p>{{ $result->jam_buka }}</p>
-    <p>{{ $result->alamat }}</p>
+    <p>{{ $result->jamBuka }}</p>
+    <p>{{ $result->jamTutup }}</p>
 @endforeach
