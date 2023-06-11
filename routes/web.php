@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RekomendasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,8 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])
 
 // Route::get('/rekomendasi', [App\Http\Controllers\DecisionTreeHelper::class, 'index'])->name('rekomendasi');
 
-Route::get('/rekomendasi', function() {
-    return view('rekomendasi');
-});
+Route::get('/rekomendasi', [RekomendasiController::class, 'hasilRekomendasi' ])->name('hasilRekomendasi');
+
+Route::get('/penjual', 'PegawaiController@index');
+
+// Route::post('/submit-form', 'FormController@submitForm')->name('submit-form');

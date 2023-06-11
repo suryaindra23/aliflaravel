@@ -48,18 +48,18 @@
             <h1 class="text-center">Hii Silahkan Pilih Rekomendasi Nasi Boranan yang ada di kota Lamongan</h1>
         </div>
 
-        <form method="post" action="" class="form-horizontal">
+        <form method="GET" action="{{ route('hasilRekomendasi') }}" class="form-horizontal">
             <div class="form-check">
                 <label class="col-sm-2 control-label form-check-label" for="form-field-1">
-                    Rasa
+                    Rasa Sambal
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="pedas" name="rasa" <?php echo isset($_POST['rasa']) ? ($_POST['rasa'] == 'pedas' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="pedas" name="rasa_sambal" <?php echo isset($_POST['rasa_sambal']) ? ($_POST['rasa_sambal'] == 'pedas' ? "checked" : "") : ""; ?> required="">
                         Pedas
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="tidak pedas" name="rasa" <?php echo isset($_POST['rasa']) ? ($_POST['rasa'] == 'tidak pedas' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="tidak pedas" name="rasa_sambal" <?php echo isset($_POST['rasa_sambal']) ? ($_POST['rasa_sambal'] == 'tidak pedas' ? "checked" : "") : ""; ?> required="">
                         Tidak Pedas
                     </label>
                 </div>
@@ -105,11 +105,11 @@
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="cukup" name="porsi" <?php echo isset($_POST['porsi']) ? ($_POST['porsi'] == 'cukup' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="cukup" name="porsi_makan" <?php echo isset($_POST['porsi_makan']) ? ($_POST['porsi_makan'] == 'cukup' ? "checked" : "") : ""; ?> required="">
                         Cukup
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="banyak" name="porsi" <?php echo isset($_POST['porsi']) ? ($_POST['porsi'] == 'banyak' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="banyak" name="porsi_makan" <?php echo isset($_POST['porsi_makan']) ? ($_POST['porsi_makan'] == 'banyak' ? "checked" : "") : ""; ?> required="">
                         Banyak
                     </label>
                 </div>
@@ -131,15 +131,15 @@
             </div>
             <div class="form-check">
                 <label class="col-sm-2 control-label" for="form-field-1">
-                    Lokasi Makan
+                    Tempat Makan
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="tidak" name="lokasi_makan" <?php echo isset($_POST['lokasi_makan']) ? ($_POST['lokasi_makan'] == 'tidak' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="tidak" name="tempat_makan" <?php echo isset($_POST['tempat_makan']) ? ($_POST['tempat_makan'] == 'tidak' ? "checked" : "") : ""; ?> required="">
                         Tidak
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="ya" name="lokasi_makan" <?php echo isset($_POST['lokasi_makan']) ? ($_POST['lokasi_makan'] == 'ya' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="ya" name="tempat_makan" <?php echo isset($_POST['tempat_makan']) ? ($_POST['tempat_makan'] == 'ya' ? "checked" : "") : ""; ?> required="">
                         Ya
                     </label>
                 </div>
@@ -149,7 +149,18 @@
                     <input name="submit" type="submit" value="Submit" class="control-label btn btn-success">
                 </div>
             </div>    
-
+            @if (isset($penjual))
+        <h2>Hasil Rekomendasi</h2>
+        @if ($penjual->isEmpty())
+            <p>P</p>
+        @else
+            <ul>
+                @foreach ($penjual as $namaPenjual)
+                    <li>{{ $namaPenjual }}</li>
+                @endforeach
+            </ul>
+        @endif
+    @endif
     </main>
     <footer>
         <!-- place footer here -->
