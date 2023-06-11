@@ -55,11 +55,13 @@
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="pedas" name="rasa_sambal" <?php echo isset($_POST['rasa_sambal']) ? ($_POST['rasa_sambal'] == 'pedas' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="pedas" name="rasa_sambal" <?php echo isset($_POST['rasa_sambal']) ? ($_POST['rasa_sambal'] == 'pedas' ? 'checked' : '') : ''; ?>
+                            required="">
                         Pedas
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="tidak pedas" name="rasa_sambal" <?php echo isset($_POST['rasa_sambal']) ? ($_POST['rasa_sambal'] == 'tidak pedas' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="tidak pedas" name="rasa_sambal"
+                            <?php echo isset($_POST['rasa_sambal']) ? ($_POST['rasa_sambal'] == 'tidak pedas' ? 'checked' : '') : ''; ?> required="">
                         Tidak Pedas
                     </label>
                 </div>
@@ -70,11 +72,13 @@
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="merah" name="warna_sambal" <?php echo isset($_POST['warna_sambal']) ? ($_POST['warna_sambal'] == 'merah' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="merah" name="warna_sambal"
+                            <?php echo isset($_POST['warna_sambal']) ? ($_POST['warna_sambal'] == 'merah' ? 'checked' : '') : ''; ?> required="">
                         Merah
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="oranye" name="warna_sambal" <?php echo isset($_POST['warna_sambal']) ? ($_POST['warna_sambal'] == 'oranye' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="oranye" name="warna_sambal"
+                            <?php echo isset($_POST['warna_sambal']) ? ($_POST['warna_sambal'] == 'oranye' ? 'checked' : '') : ''; ?> required="">
                         Oranye
                     </label>
                 </div>
@@ -85,31 +89,36 @@
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="sangat murah" name="harga" <?php echo isset($_POST['harga']) ? ($_POST['harga'] == 'sangat murah' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="sangat murah" name="harga"
+                            <?php echo isset($_POST['harga']) ? ($_POST['harga'] == 'sangat murah' ? 'checked' : '') : ''; ?> required="">
                         Sangat Murah
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="murah" name="harga" <?php echo isset($_POST['harga']) ? ($_POST['harga'] == 'murah' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="murah" name="harga" <?php echo isset($_POST['harga']) ? ($_POST['harga'] == 'murah' ? 'checked' : '') : ''; ?>
+                            required="">
                         Murah
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="mahal" name="harga" <?php echo isset($_POST['harga']) ? ($_POST['harga'] == 'mahal' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="mahal" name="harga" <?php echo isset($_POST['harga']) ? ($_POST['harga'] == 'mahal' ? 'checked' : '') : ''; ?>
+                            required="">
                         Mahal
                     </label>
                 </div>
             </div>
-    
+
             <div class="form-check">
                 <label class="col-sm-2 control-label" for="form-field-1">
                     Porsi Makan
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="cukup" name="porsi_makan" <?php echo isset($_POST['porsi_makan']) ? ($_POST['porsi_makan'] == 'cukup' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="cukup" name="porsi_makan"
+                            <?php echo isset($_POST['porsi_makan']) ? ($_POST['porsi_makan'] == 'cukup' ? 'checked' : '') : ''; ?> required="">
                         Cukup
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="banyak" name="porsi_makan" <?php echo isset($_POST['porsi_makan']) ? ($_POST['porsi_makan'] == 'banyak' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="banyak" name="porsi_makan"
+                            <?php echo isset($_POST['porsi_makan']) ? ($_POST['porsi_makan'] == 'banyak' ? 'checked' : '') : ''; ?> required="">
                         Banyak
                     </label>
                 </div>
@@ -120,11 +129,13 @@
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="tidak" name="parkir" <?php echo isset($_POST['parkir']) ? ($_POST['parkir'] == 'tidak' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="tidak" name="parkir" <?php echo isset($_POST['parkir']) ? ($_POST['parkir'] == 'tidak' ? 'checked' : '') : ''; ?>
+                            required="">
                         Tidak
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="ya" name="parkir" <?php echo isset($_POST['parkir']) ? ($_POST['parkir'] == 'ya' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="ya" name="parkir"
+                            <?php echo isset($_POST['parkir']) ? ($_POST['parkir'] == 'ya' ? 'checked' : '') : ''; ?> required="">
                         Ya
                     </label>
                 </div>
@@ -135,11 +146,13 @@
                 </label>
                 <div class="col-sm-9">
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="tidak" name="tempat_makan" <?php echo isset($_POST['tempat_makan']) ? ($_POST['tempat_makan'] == 'tidak' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="tidak" name="tempat_makan"
+                            <?php echo isset($_POST['tempat_makan']) ? ($_POST['tempat_makan'] == 'tidak' ? 'checked' : '') : ''; ?> required="">
                         Tidak
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="square-black" value="ya" name="tempat_makan" <?php echo isset($_POST['tempat_makan']) ? ($_POST['tempat_makan'] == 'ya' ? "checked" : "") : ""; ?> required="">
+                        <input type="radio" class="square-black" value="ya" name="tempat_makan"
+                            <?php echo isset($_POST['tempat_makan']) ? ($_POST['tempat_makan'] == 'ya' ? 'checked' : '') : ''; ?> required="">
                         Ya
                     </label>
                 </div>
@@ -148,28 +161,30 @@
                 <div class="col-sm-9 pull-right">
                     <input name="submit" type="submit" value="Submit" class="control-label btn btn-success">
                 </div>
-            </div>    
-            @if (isset($penjual))
-        <h2>Hasil Rekomendasi</h2>
-        @if ($penjual->isEmpty())
-            <p>P</p>
-        @else
-            <ul>
-                @foreach ($penjual as $namaPenjual)
-                    <li>{{ $namaPenjual }}</li>
-                @endforeach
-                @foreach ($alamat as $alamatPenjual)
-                    <li>{{ $alamatPenjual }}</li>
-                @endforeach
-                @foreach ($jam_buka as $jam_bukaPenjual)
-                    <li>{{ $jam_bukaPenjual }}</li>
-                @endforeach
-                @foreach ($jam_tutup as $jam_tutupPenjual)
-                    <li>{{ $jam_tutupPenjual }}</li>
-                @endforeach
-            </ul>
-        @endif
-    @endif
+            </div>
+            <!DOCTYPE html>
+            <html>
+
+            <head>
+                <title>Rekomendasi</title>
+            </head>
+
+            <body>
+                <h1>Rekomendasi Tempat Makan</h1>
+                <ul>
+                    @foreach ($rekomendasi as $item)
+                        <li>
+                            <strong>Penjual:</strong> {{ $item->penjual }}<br>
+                            <strong>Alamat:</strong> {{ $item->alamat }}<br>
+                            <strong>Jam Buka:</strong> {{ $item->jam_buka }}<br>
+                            <strong>Jam Tutup:</strong> {{ $item->jam_tutup }}
+                        </li>
+                    @endforeach
+                </ul>
+            </body>
+
+            </html>
+
     </main>
     <footer>
         <!-- place footer here -->

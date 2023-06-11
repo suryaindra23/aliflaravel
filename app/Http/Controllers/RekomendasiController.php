@@ -2,43 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Rekomendasi;
-use App\Http\Requests\StoreRekomendasiRequest;
-use App\Http\Requests\UpdateRekomendasiRequest;
 use Illuminate\Http\Request;
+use App\Models\Rekomendasi;
 
 class RekomendasiController extends Controller
 {
-    public function hasilRekomendasi(Request $request)
+    public function index(Request $request)
     {
-        // Mengambil nilai input dari form
-        $rasa = $request->input('rasa_sambal');
+        // Ambil nilai dari radio button
+        $rasa = $request->input('rasa');
         $warnaSambal = $request->input('warna_sambal');
         $harga = $request->input('harga');
-        $porsi = $request->input('porsi_makan');
+        $porsi = $request->input('porsi');
         $parkir = $request->input('parkir');
-        $lokasiMakan = $request->input('tempat_makan');
+        $tempatMakan = $request->input('tempat_makan');
 
-        // Menjalankan query untuk mencocokan parameter di database
+        // Gunakan nilai dari radio button untuk melakukan query di database
         $rekomendasi = Rekomendasi::where('rasa_sambal', $rasa)
             ->where('warna_sambal', $warnaSambal)
             ->where('harga', $harga)
             ->where('porsi_makan', $porsi)
             ->where('parkir', $parkir)
-            ->where('tempat_makan', $lokasiMakan)
-            ->get();
+            ->where('tempat_makan', $tempatMakan)
+            ->get(['penjual', 'alamat', 'jam_buka', 'jam_tutup']);
 
-        // Mengeluarkan 'penjual' dari hasil query
-        $penjual = $rekomendasi->pluck('penjual');
-        $alamat = $rekomendasi->pluck('alamat');
-        $jam_buka = $rekomendasi->pluck('jam_buka');
-        $jam_buka = $rekomendasi->pluck('jam_tutup');
-
-        // Render halaman form dengan menyertakan data penjual
-        return view('/rekomendasi', 
-        compact('penjual'),
-        compact('alamat'),
-        compact('jam_buka'),
-        compact('jam_tutup'));
+        // Kembalikan hasil query
+        return view('rekomendasi', ['rekomendasi' => $rekomendasi]);
     }
 }
